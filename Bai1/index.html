@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Bai2/style.css">
+
+    <!-- Support responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Sách TS-Book</title>
+</head>
+
+<body>
+
+    <!-- header: Name of the bookstore -->
+    <header>
+        <h1>Cửa hàng Sách TS-Book</h1>
+
+        <!-- navigation -->
+        <nav>
+            <a href="#">Trang chủ</a> |
+            <a href="#">Sản phẩm</a> |
+            <a href="#">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+
+        <!-- introduction -->
+        <section>
+            <h2>Giới thiệu</h2>
+            <p>Chào mừng bạn đến với Cửa hàng Sách TS-Book – nơi mang tri thức đến mọi nhà!</p>
+        </section>
+
+        <!-- list products -->
+        <section>
+            <h2>Sản phẩm nổi bật</h2>
+            <!-- Search products-->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <button id="searchBtn">Tìm</button>
+            </div>
+
+            <!-- Button to show form add product -->
+            <button id="addProductBtn" class="add-btn">Thêm sản phẩm</button>
+
+            <!-- Form to add new product (hidden by default) -->
+            <form id="addProductForm" class="hidden">
+                <h3>Thêm sản phẩm mới</h3>
+
+                <label for="productName">Tên sản phẩm:</label>
+                <input type="text" id="productName" required>
+
+                <label for="productPrice">Giá:</label>
+                <input type="number" id="productPrice" required min="1">
+
+                <label for="productDesc">Mô tả:</label>
+                <textarea id="productDesc" rows="3"></textarea>
+
+                <p id="errorMsg"></p>
+
+                <button type="submit">Thêm</button>
+                <button type="button" id="cancelBtn">Hủy</button>
+            </form>
+
+
+            <!-- list of featured products
+             use article to wrap each product -->
+            <div id="product-list">
+                <article class="product-item">
+                    <h3 class="product-name">Harry Potter và Hòn đá Phù thủy</h3>
+                    <p class="product-desc">Cuốn sách mở đầu cho hành trình phiêu lưu của Harry Potter.</p>
+                    <p class="product-price">Giá: 120.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <h3 class="product-name">Doraemon - Tuyển tập đặc biệt</h3>
+                    <p class="product-desc">Những câu chuyện thú vị và ý nghĩa cùng Doraemon và Nobita.</p>
+                    <p class="product-price">Giá: 35.000đ</p>
+                </article>
+
+                <article class="product-item">
+                    <h3 class="product-name">Đắc Nhân Tâm</h3>
+                    <p class="product-desc">Cuốn sách kỹ năng sống kinh điển giúp thay đổi cuộc đời bạn.</p>
+                    <p class="product-price">Giá: 90.000đ</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- contact section -->
+        <section>
+            <h2>Liên hệ với chúng tôi</h2>
+
+            <!-- Form to contact -->
+            <form id="contact-form">
+                <label for="name">Tên của bạn:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Số điện thoại:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="address">Địa chỉ:</label><br>
+                <input type="text" id="address" name="address" required><br><br>
+
+                <label for="message">Nội dung:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>© 2025 Cửa hàng Sách TS-Book - Tất cả bản quyền được bảo lưu.</p>
+    </footer>
+    <script src="../Bai5/script.js"></script>
+
+</body>
+
+</html>
